@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C2165E0327445B0800DE1014 /* Fat_PipeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2165E0227445B0800DE1014 /* Fat_PipeApp.swift */; };
+		C2165E0527445B0800DE1014 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2165E0427445B0800DE1014 /* ContentView.swift */; };
+		C2165E0727445B0800DE1014 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2165E0627445B0800DE1014 /* Assets.xcassets */; };
+		C2165E0A27445B0800DE1014 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2165E0927445B0800DE1014 /* Preview Assets.xcassets */; };
+		C2165E1527445B0900DE1014 /* Fat_PipeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2165E1427445B0900DE1014 /* Fat_PipeTests.swift */; };
+		C2165E1F27445B0900DE1014 /* Fat_PipeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2165E1E27445B0900DE1014 /* Fat_PipeUITests.swift */; };
+		C2165E2127445B0900DE1014 /* Fat_PipeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2165E2027445B0900DE1014 /* Fat_PipeUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C2165E1127445B0900DE1014 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2165DF727445B0800DE1014 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2165DFE27445B0800DE1014;
+			remoteInfo = "Fat Pipe";
+		};
+		C2165E1B27445B0900DE1014 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2165DF727445B0800DE1014 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2165DFE27445B0800DE1014;
+			remoteInfo = "Fat Pipe";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C2165DFF27445B0800DE1014 /* Fat Pipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fat Pipe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2165E0227445B0800DE1014 /* Fat_PipeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fat_PipeApp.swift; sourceTree = "<group>"; };
+		C2165E0427445B0800DE1014 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C2165E0627445B0800DE1014 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C2165E0927445B0800DE1014 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C2165E0B27445B0800DE1014 /* Fat_Pipe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Fat_Pipe.entitlements; sourceTree = "<group>"; };
+		C2165E1027445B0900DE1014 /* Fat PipeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fat PipeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2165E1427445B0900DE1014 /* Fat_PipeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fat_PipeTests.swift; sourceTree = "<group>"; };
+		C2165E1A27445B0900DE1014 /* Fat PipeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fat PipeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2165E1E27445B0900DE1014 /* Fat_PipeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fat_PipeUITests.swift; sourceTree = "<group>"; };
+		C2165E2027445B0900DE1014 /* Fat_PipeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fat_PipeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C2165DFC27445B0800DE1014 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2165E0D27445B0900DE1014 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2165E1727445B0900DE1014 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C2165DF627445B0800DE1014 = {
+			isa = PBXGroup;
+			children = (
+				C2165E0127445B0800DE1014 /* Fat Pipe */,
+				C2165E1327445B0900DE1014 /* Fat PipeTests */,
+				C2165E1D27445B0900DE1014 /* Fat PipeUITests */,
+				C2165E0027445B0800DE1014 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C2165E0027445B0800DE1014 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2165DFF27445B0800DE1014 /* Fat Pipe.app */,
+				C2165E1027445B0900DE1014 /* Fat PipeTests.xctest */,
+				C2165E1A27445B0900DE1014 /* Fat PipeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2165E0127445B0800DE1014 /* Fat Pipe */ = {
+			isa = PBXGroup;
+			children = (
+				C2165E0227445B0800DE1014 /* Fat_PipeApp.swift */,
+				C2165E0427445B0800DE1014 /* ContentView.swift */,
+				C2165E0627445B0800DE1014 /* Assets.xcassets */,
+				C2165E0B27445B0800DE1014 /* Fat_Pipe.entitlements */,
+				C2165E0827445B0800DE1014 /* Preview Content */,
+			);
+			path = "Fat Pipe";
+			sourceTree = "<group>";
+		};
+		C2165E0827445B0800DE1014 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C2165E0927445B0800DE1014 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C2165E1327445B0900DE1014 /* Fat PipeTests */ = {
+			isa = PBXGroup;
+			children = (
+				C2165E1427445B0900DE1014 /* Fat_PipeTests.swift */,
+			);
+			path = "Fat PipeTests";
+			sourceTree = "<group>";
+		};
+		C2165E1D27445B0900DE1014 /* Fat PipeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C2165E1E27445B0900DE1014 /* Fat_PipeUITests.swift */,
+				C2165E2027445B0900DE1014 /* Fat_PipeUITestsLaunchTests.swift */,
+			);
+			path = "Fat PipeUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C2165DFE27445B0800DE1014 /* Fat Pipe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2165E2427445B0900DE1014 /* Build configuration list for PBXNativeTarget "Fat Pipe" */;
+			buildPhases = (
+				C2165DFB27445B0800DE1014 /* Sources */,
+				C2165DFC27445B0800DE1014 /* Frameworks */,
+				C2165DFD27445B0800DE1014 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Fat Pipe";
+			productName = "Fat Pipe";
+			productReference = C2165DFF27445B0800DE1014 /* Fat Pipe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C2165E0F27445B0900DE1014 /* Fat PipeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2165E2727445B0900DE1014 /* Build configuration list for PBXNativeTarget "Fat PipeTests" */;
+			buildPhases = (
+				C2165E0C27445B0900DE1014 /* Sources */,
+				C2165E0D27445B0900DE1014 /* Frameworks */,
+				C2165E0E27445B0900DE1014 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2165E1227445B0900DE1014 /* PBXTargetDependency */,
+			);
+			name = "Fat PipeTests";
+			productName = "Fat PipeTests";
+			productReference = C2165E1027445B0900DE1014 /* Fat PipeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C2165E1927445B0900DE1014 /* Fat PipeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2165E2A27445B0900DE1014 /* Build configuration list for PBXNativeTarget "Fat PipeUITests" */;
+			buildPhases = (
+				C2165E1627445B0900DE1014 /* Sources */,
+				C2165E1727445B0900DE1014 /* Frameworks */,
+				C2165E1827445B0900DE1014 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2165E1C27445B0900DE1014 /* PBXTargetDependency */,
+			);
+			name = "Fat PipeUITests";
+			productName = "Fat PipeUITests";
+			productReference = C2165E1A27445B0900DE1014 /* Fat PipeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C2165DF727445B0800DE1014 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					C2165DFE27445B0800DE1014 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					C2165E0F27445B0900DE1014 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = C2165DFE27445B0800DE1014;
+					};
+					C2165E1927445B0900DE1014 = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = C2165DFE27445B0800DE1014;
+					};
+				};
+			};
+			buildConfigurationList = C2165DFA27445B0800DE1014 /* Build configuration list for PBXProject "Fat Pipe" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C2165DF627445B0800DE1014;
+			productRefGroup = C2165E0027445B0800DE1014 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2165DFE27445B0800DE1014 /* Fat Pipe */,
+				C2165E0F27445B0900DE1014 /* Fat PipeTests */,
+				C2165E1927445B0900DE1014 /* Fat PipeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C2165DFD27445B0800DE1014 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2165E0A27445B0800DE1014 /* Preview Assets.xcassets in Resources */,
+				C2165E0727445B0800DE1014 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2165E0E27445B0900DE1014 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2165E1827445B0900DE1014 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C2165DFB27445B0800DE1014 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2165E0527445B0800DE1014 /* ContentView.swift in Sources */,
+				C2165E0327445B0800DE1014 /* Fat_PipeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2165E0C27445B0900DE1014 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2165E1527445B0900DE1014 /* Fat_PipeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2165E1627445B0900DE1014 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2165E2127445B0900DE1014 /* Fat_PipeUITestsLaunchTests.swift in Sources */,
+				C2165E1F27445B0900DE1014 /* Fat_PipeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C2165E1227445B0900DE1014 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2165DFE27445B0800DE1014 /* Fat Pipe */;
+			targetProxy = C2165E1127445B0900DE1014 /* PBXContainerItemProxy */;
+		};
+		C2165E1C27445B0900DE1014 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2165DFE27445B0800DE1014 /* Fat Pipe */;
+			targetProxy = C2165E1B27445B0900DE1014 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C2165E2227445B0900DE1014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C2165E2327445B0900DE1014 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		C2165E2527445B0900DE1014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Fat Pipe/Fat_Pipe.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Fat Pipe/Preview Content\"";
+				DEVELOPMENT_TEAM = 8Q7TMPA46J;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.goodsnooze.Fat-Pipe";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C2165E2627445B0900DE1014 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Fat Pipe/Fat_Pipe.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Fat Pipe/Preview Content\"";
+				DEVELOPMENT_TEAM = 8Q7TMPA46J;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.goodsnooze.Fat-Pipe";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		C2165E2827445B0900DE1014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8Q7TMPA46J;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.goodsnooze.Fat-PipeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fat Pipe.app/Contents/MacOS/Fat Pipe";
+			};
+			name = Debug;
+		};
+		C2165E2927445B0900DE1014 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8Q7TMPA46J;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.goodsnooze.Fat-PipeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fat Pipe.app/Contents/MacOS/Fat Pipe";
+			};
+			name = Release;
+		};
+		C2165E2B27445B0900DE1014 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8Q7TMPA46J;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.goodsnooze.Fat-PipeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Fat Pipe";
+			};
+			name = Debug;
+		};
+		C2165E2C27445B0900DE1014 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8Q7TMPA46J;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.goodsnooze.Fat-PipeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "Fat Pipe";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C2165DFA27445B0800DE1014 /* Build configuration list for PBXProject "Fat Pipe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2165E2227445B0900DE1014 /* Debug */,
+				C2165E2327445B0900DE1014 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2165E2427445B0900DE1014 /* Build configuration list for PBXNativeTarget "Fat Pipe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2165E2527445B0900DE1014 /* Debug */,
+				C2165E2627445B0900DE1014 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2165E2727445B0900DE1014 /* Build configuration list for PBXNativeTarget "Fat PipeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2165E2827445B0900DE1014 /* Debug */,
+				C2165E2927445B0900DE1014 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2165E2A27445B0900DE1014 /* Build configuration list for PBXNativeTarget "Fat PipeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2165E2B27445B0900DE1014 /* Debug */,
+				C2165E2C27445B0900DE1014 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C2165DF727445B0800DE1014 /* Project object */;
+}
