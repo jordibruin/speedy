@@ -32,7 +32,7 @@ class StatusBarDelegate: NSObject, NSApplicationDelegate {
         
         // Create the popover
         let popover = NSPopover()
-        popover.contentSize = NSSize(width: 200, height: 240)
+        popover.contentSize = NSSize(width: 200, height: 250)
         popover.behavior = .transient
         popover.contentViewController = NSHostingController(rootView: contentView)
         popover.becomeFirstResponder()
@@ -41,10 +41,15 @@ class StatusBarDelegate: NSObject, NSApplicationDelegate {
         // Create the status item
         self.statusBarItem = NSStatusBar.system.statusItem(withLength: CGFloat(NSStatusItem.variableLength))
         
-//        statusBarItem.button?.toolTip = isActive ? "Disable Low Power Mode" : "Enable Low Power Mode"
-        
         if let button = self.statusBarItem.button {
-            button.image = NSImage(systemSymbolName: "speedometer", accessibilityDescription: "Speedy")
+            if let image = NSImage(systemSymbolName: "speedometer",
+                                   accessibilityDescription: "Speedy") {
+                    
+                var config = NSImage.SymbolConfiguration(textStyle: .title2,
+                                                         scale: .medium)
+//                config = config.applying(.init(paletteColors: [NSColor(.speedyGreen), .black]))
+                button.image = image.withSymbolConfiguration(config)
+            }
             
             button.action = #selector(togglePopover(_:))
             button.toolTip = "Open Speedy"

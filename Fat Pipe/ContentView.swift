@@ -12,6 +12,8 @@ struct ContentView: View {
     @State var result: SpeedtestResult?
     @State var testing: Bool = false
     
+    @State var shouldIgnoreNextResults = false
+    
     @State var showMenu: Bool = false
     
     var body: some View {
@@ -22,6 +24,15 @@ struct ContentView: View {
             
             VStack {
                 HStack {
+                    if result != nil && !testing {
+                        Button {
+                            result = nil
+                        } label: {
+                            Image(systemName: "gobackward")
+                        }
+                        .buttonStyle(.plain)
+                    }
+                    
                     Spacer()
                     
                     Button {
@@ -34,25 +45,23 @@ struct ContentView: View {
                                 } label: {
                                     Text("Quit Speedy")
                                 }
-                                .buttonStyle(.borderedProminent)
+
+                                .buttonStyle(.bordered)
                             }
                     }
                     .buttonStyle(.plain)
-
-                    
-
                 }
                 
                 Spacer()
             }
-            .padding()
+            .padding(12)
         }
     }
     
+    
+    
     var content: some View {
         VStack {
-            
-            
             
             if testing || result != nil {
                 resultsView
@@ -60,7 +69,7 @@ struct ContentView: View {
             } else {
                 Image(systemName: "speedometer")
                     .font(.system(size: 80))
-                    .foregroundColor(.blue)
+                    .foregroundColor(.speedyGreen)
                     .symbolRenderingMode(.hierarchical)
             }
             
@@ -83,24 +92,30 @@ struct ContentView: View {
 //                let result = SpeedtestResult(outputString: "\r==== SUMMARY ====                                                                                         \rUpload capacity: 35.337 Mbps\rDownload capacity: 263.145 Mbps\rUpload flows: 12\rDownload flows: 20\rResponsiveness: High (1553 RPM)\n")
 //
 //                self.result = result
-                performNetworkTest()
+//                performNetworkTest()
+                if testing {
+                    stopTest()
+                } else {
+                    startTest()
+                    
+                }
             } label: {
                 HStack {
                     Spacer()
-                    Text(testing ? "Testing" : result != nil ? "Test Again" : "Start Speedtest")
+                    Text(testing ? "Stop Testing" : result != nil ? "Test Again" : "Start Speedtest")
                         .bold()
                     
                     Spacer()
                 }
                 .padding(8)
-                .background(Color.blue.opacity(0.5))
+                .background(testing ? Color.red.opacity(0.5) : Color.speedyGreen.opacity(0.5))
                 .cornerRadius(8)
             }
-            .disabled(testing)
+//            .disabled(testing)
             .buttonStyle(.plain)
-            //                .buttonStyle(.borderedProminent)
         }
         .padding()
+        .padding(.top, 8)
     }
     
     var resultsView: some View {
@@ -112,12 +127,14 @@ struct ContentView: View {
                 if testing {
                     ProgressView()
                         .scaleEffect(0.5)
-                        .tint(.blue)
+                        .tint(.speedyGreen)
                 } else {
-                    Text(String(format: "%.2f Mbps", result?.downloadSpeed ?? 0))
-                        .font(.system(.largeTitle, design: .rounded))
-                        .bold()
-                        .foregroundColor(.blue)
+                    if let result = result {
+                        Text(result.speedStringFor(speed: result.downloadSpeed))
+                            .font(.system(.largeTitle, design: .rounded))
+                            .bold()
+                            .foregroundColor(.speedyGreen)
+                    }
                 }
             }
             
@@ -128,12 +145,14 @@ struct ContentView: View {
                 if testing {
                     ProgressView()
                         .scaleEffect(0.5)
-                        .tint(.blue)
+                        .tint(.speedyGreen)
                 } else {
-                    Text(String(format: "%.2f Mbps", result?.uploadSpeed ?? 0))
-                        .font(.system(.largeTitle, design: .rounded))
-                        .bold()
-                        .foregroundColor(.blue)
+                    if let result = result {
+                        Text(result.speedStringFor(speed: result.uploadSpeed))
+                            .font(.system(.largeTitle, design: .rounded))
+                            .bold()
+                            .foregroundColor(.speedyGreen)
+                    }
                 }
             }
             
@@ -144,41 +163,89 @@ struct ContentView: View {
                 if testing {
                     ProgressView()
                         .scaleEffect(0.5)
-                        .tint(.blue)
+                        .tint(.speedyGreen)
                 } else {
-                    Text("\(result?.responsiveNessScore ?? 0)")
+                    Text("\(result?.responsiveNess ?? 0)")
                         .font(.system(.largeTitle, design: .rounded))
                         .bold()
-                        .foregroundColor(.blue)
+                        .foregroundColor(.speedyGreen)
                 }
             }
         }
     }
     
-    func performNetworkTest() {
+//    func performNetworkTest() {
+//        testing = true
+//        DispatchQueue.global(qos: .background).async {
+//            guard let shortcutRunResult = self.run("osascript -e 'do shell script \"networkquality\"'") else { return }
+//
+//            testing = false
+//
+//            if shouldIgnoreNextResults { result = nil }
+//
+//            guard let speedTestResults = self.checkResultOfTerminalCommand(output: shortcutRunResult) else {
+//                print("No test results")
+//                return
+//            }
+//
+//            self.result = speedTestResults
+//        }
+//    }
+//
+//    func checkResultOfTerminalCommand(output: String) -> SpeedtestResult? {
+//        if output.contains("User cancelled") {
+//            print("User cancelled")
+//            return nil
+//        } else {
+//            return SpeedtestResult(outputString: output)
+//        }
+//    }
+    
+    
+    // MARK: JSON
+    
+    func startTest() {
+        shouldIgnoreNextResults = false
         testing = true
         DispatchQueue.global(qos: .background).async {
-            guard let shortcutRunResult = self.run("osascript -e 'do shell script \"networkquality\"'") else { return }
+            guard let shortcutRunResult = self.run("osascript -e 'do shell script \"networkquality -c\"'") else { return }
             
             testing = false
             
-            guard let speedTestResults = self.checkResultOfTerminalCommand(output: shortcutRunResult) else {
+            if shouldIgnoreNextResults {
+                result = nil
+                return
+            }
+            
+            guard let speedTestResults = self.checkResultOfJSONTerminalCommand(output: shortcutRunResult) else {
                 print("No test results")
+                testing = false
                 return
             }
             
             self.result = speedTestResults
         }
     }
-    
-    
-    func checkResultOfTerminalCommand(output: String) -> SpeedtestResult? {
-        if output.contains("User cancelled") {
+        
+    func checkResultOfJSONTerminalCommand(output: String) -> SpeedtestResult? {
+        if output.contains("timed out") {
+            print("Time out")
+            return nil
+        } else if output.contains("User cancelled") {
             print("User cancelled")
             return nil
         } else {
-            return SpeedtestResult(outputString: output)
+            if let data = try? Data(output.utf8) {
+                return SpeedtestResult(json: data)
+            }
+            
         }
+    }
+    
+    func stopTest() {
+        result = nil
+        testing = false
+        shouldIgnoreNextResults = true
     }
     
     func run(_ cmd: String) -> String? {
