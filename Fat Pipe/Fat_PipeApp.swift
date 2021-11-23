@@ -20,7 +20,6 @@ struct Fat_PipeApp: App {
                 .frame(width: 0, height: 0)
         }
         .windowStyle(HiddenTitleBarWindowStyle())
-
     }
         
     init() {

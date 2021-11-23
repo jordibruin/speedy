@@ -6,11 +6,45 @@
 //
 
 import Foundation
+import CoreWLAN
 
-struct SpeedtestResult: Codable {
+struct NetworkQualityResult: Codable, Hashable {
     let downloadSpeed: Double
     let uploadSpeed: Double
     let responsiveNess: Int
+    
+    init(json: Data) {
+        let decoder = JSONDecoder()
+
+        if let networkQuality = try? decoder.decode(NetworkQualityResult.self, from: json) {
+            self = networkQuality
+        } else {
+            self.downloadSpeed = 1
+            self.uploadSpeed = 1
+            self.responsiveNess = 1
+        }
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        case uploadSpeed = "ul_throughput"
+        case downloadSpeed = "dl_throughput"
+        case responsiveNess = "responsiveness"
+    }
+    
+    init(downloadSpeed: Double, uploadSpeed: Double, responsiveNess: Int) {
+        self.downloadSpeed = downloadSpeed
+        self.uploadSpeed = uploadSpeed
+        self.responsiveNess = responsiveNess
+    }
+    static let example = NetworkQualityResult(downloadSpeed: 100, uploadSpeed: 140, responsiveNess: 2)
+}
+
+struct SpeedtestResult: Identifiable, Codable, Hashable {
+    
+    let id: UUID
+    let networkQuality: NetworkQualityResult
+    let wifiName: String
+    let wifiHardwareName: String
     
     
     func speedStringFor(speed: Double) -> String {
@@ -31,49 +65,29 @@ struct SpeedtestResult: Codable {
         
         return String(format: "%.2f \(speedValue)", realSpeed)
     }
-    
-    init(outputString: String) {
         
-        let elements = outputString.components(separatedBy: "\r")
-        
-        let uploadCapacityElements = elements[2].components(separatedBy: " ")
-        self.uploadSpeed = Double(uploadCapacityElements[2]) ?? 99
-        
-        let downloadCapacityElements = elements[3].components(separatedBy: " ")
-        self.downloadSpeed = Double(downloadCapacityElements[2]) ?? 99
-        
-//        let uploadFlowsElements = elements[4].components(separatedBy: " ")
-//        self.uploadFlows = Int(uploadFlowsElements[2]) ?? 99
-//
-//        let downloadFlowsElements = elements[5].components(separatedBy: " ")
-//        self.downloadFlows = Int(downloadFlowsElements[2]) ?? 99
-        
-//        let responsiveNessElements = elements[6].components(separatedBy: " ")
-//        self.responsiveNess = responsiveNessElements[1]
-        
-        let responsiveNessScoreElements = elements[6].components(separatedBy: "(")
-        let second = responsiveNessScoreElements[1].components(separatedBy: " ")
-        
-        self.responsiveNess = Int(second[0]) ?? 99
-    }
-    
     init(json: Data) {
-        let decoder = JSONDecoder()
-
-        if let result = try? decoder.decode(SpeedtestResult.self, from: json) {
-            self = result
-        } else {
-            self.downloadSpeed = 1
-            self.uploadSpeed = 1
-            self.responsiveNess = 1
-        }
+        let quality = NetworkQualityResult(json: json)
+        self.networkQuality = quality
+        
+        self.wifiName = CWWiFiClient.shared().interface(withName: nil)?.ssid() ?? ""
+        self.wifiHardwareName = CWWiFiClient.shared().interface(withName: nil)?.hardwareAddress() ?? ""
+        
+        self.id = UUID()
     }
     
     enum CodingKeys: String, CodingKey {
-        case uploadSpeed = "ul_throughput"
-        case downloadSpeed = "dl_throughput"
-        case responsiveNess = "responsiveness"
+        case networkQuality, wifiName, wifiHardwareName, id
     }
+    
+    init(id: UUID, quality: NetworkQualityResult, name: String, hardwareName: String) {
+        self.networkQuality = quality
+        self.wifiName = name
+        self.wifiHardwareName = hardwareName
+        self.id = id
+    }
+    
+    static let example = SpeedtestResult(id: UUID(), quality: NetworkQualityResult(downloadSpeed: 100, uploadSpeed: 140, responsiveNess: 2), name: "Wifi naam", hardwareName: "abc")
 }
 
 //let dict = myString.toJSON() as? [String:AnyObject]

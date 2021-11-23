@@ -73,7 +73,7 @@ class ConfigManager: ObservableObject {
                         
                         switch modalResult {
                         case .alertFirstButtonReturn: // NSApplication.ModalResponse.alertFirstButtonReturn
-                            if let url = URL(string: "https://goodsnooze.gumroad.com/l/fatpipe") {
+                            if let url = URL(string: "https://goodsnooze.gumroad.com/l/speedyapp") {
                                 if NSWorkspace.shared.open(url) {
                                     print("Opened Gumroad")
                                 }

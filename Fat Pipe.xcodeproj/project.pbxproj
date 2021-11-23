@@ -19,6 +19,8 @@
 		C2165E3227446E0500DE1014 /* SpeedtestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2165E3127446E0500DE1014 /* SpeedtestResult.swift */; };
 		C2165E35274471B600DE1014 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2165E34274471B600DE1014 /* GameKit.framework */; };
 		C2165E6F27457A8E00DE1014 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2165E6E27457A8E00DE1014 /* Color+Extensions.swift */; };
+		C277CF45274C0B62008CAB5B /* HistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C277CF44274C0B62008CAB5B /* HistoryManager.swift */; };
+		C277CF48274C0E7F008CAB5B /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C277CF47274C0E7F008CAB5B /* HistoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		C2165E3127446E0500DE1014 /* SpeedtestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeedtestResult.swift; sourceTree = "<group>"; };
 		C2165E34274471B600DE1014 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		C2165E6E27457A8E00DE1014 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		C277CF44274C0B62008CAB5B /* HistoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryManager.swift; sourceTree = "<group>"; };
+		C277CF47274C0E7F008CAB5B /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 				C2165E0427445B0800DE1014 /* ContentView.swift */,
 				C2165E2F27445B6000DE1014 /* StatusBar.swift */,
 				C2165E3127446E0500DE1014 /* SpeedtestResult.swift */,
+				C277CF46274C0E74008CAB5B /* Views */,
+				C277CF44274C0B62008CAB5B /* HistoryManager.swift */,
 				C2165E6E27457A8E00DE1014 /* Color+Extensions.swift */,
 				C2165E0627445B0800DE1014 /* Assets.xcassets */,
 				C2165E0B27445B0800DE1014 /* Fat_Pipe.entitlements */,
@@ -151,6 +157,14 @@
 				C2165E34274471B600DE1014 /* GameKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C277CF46274C0E74008CAB5B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C277CF47274C0E7F008CAB5B /* HistoryView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,9 +298,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2165E0527445B0800DE1014 /* ContentView.swift in Sources */,
+				C277CF48274C0E7F008CAB5B /* HistoryView.swift in Sources */,
 				C2165E0327445B0800DE1014 /* Fat_PipeApp.swift in Sources */,
 				C2165E2E27445B3F00DE1014 /* ConfigManager.swift in Sources */,
 				C2165E3027445B6000DE1014 /* StatusBar.swift in Sources */,
+				C277CF45274C0B62008CAB5B /* HistoryManager.swift in Sources */,
 				C2165E3227446E0500DE1014 /* SpeedtestResult.swift in Sources */,
 				C2165E6F27457A8E00DE1014 /* Color+Extensions.swift in Sources */,
 			);
